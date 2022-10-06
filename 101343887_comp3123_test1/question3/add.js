@@ -4,7 +4,7 @@ const process = require('process')
 
 
 
-var dir = "./question3/Logs"
+var dir = __dirname + "/Logs"
 
 if(!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
@@ -12,7 +12,7 @@ if(!fs.existsSync(dir)) {
 
 console.log(`Starting directory: ${process.cwd()}`);
 try {
-  process.chdir('./question3/Logs');
+  process.chdir(dir);
   console.log(`New directory: ${process.cwd()}`);
 } catch (err) {
   console.error(`chdir: ${err}`);
